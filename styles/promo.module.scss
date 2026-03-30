@@ -4,6 +4,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+
+  transition: opacity 0.8s ease;
+}
+
+.hiding {
+  opacity: 0;
 }
 
 .wrapper {
