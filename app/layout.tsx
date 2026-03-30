@@ -1,5 +1,5 @@
 import { Open_Sans } from 'next/font/google';
-import { Lora } from 'next/font/google';
+import { Playfair_Display } from 'next/font/google';
 import type { Metadata } from 'next';
 import './globals.css';
 import Intro from '@/components/intro';
@@ -10,10 +10,10 @@ const openSans = Open_Sans({
   variable: '--font-open-sans',
 });
 
-const lora = Lora({
+const playfair = Playfair_Display({
   subsets: ['latin', 'cyrillic'],
   weight: ['400', '600', '700'],
-  variable: '--font-lora',
+  variable: '--font-playfair',
 });
 
 export const metadata: Metadata = {
@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className={`${openSans.variable} ${lora.variable}`} lang="ru">
+    <html className={`${openSans.variable} ${playfair.variable}`} lang="ru">
       <body>
         <Intro />
         {children}
