@@ -2,6 +2,7 @@ import { Open_Sans } from 'next/font/google';
 import { Lora } from 'next/font/google';
 import type { Metadata } from 'next';
 import './globals.css';
+import Intro from '@/components/intro';
 
 const openSans = Open_Sans({
   subsets: ['latin', 'cyrillic'],
@@ -27,7 +28,10 @@ export default function RootLayout({
 }>) {
   return (
     <html className={`${openSans.variable} ${lora.variable}`} lang="ru">
-      <body>{children}</body>
+      <body>
+        <Intro />
+        {children}
+      </body>
     </html>
   );
 }
