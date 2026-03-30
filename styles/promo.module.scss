@@ -1,0 +1,65 @@
+.promo {
+  background-color: white;
+  background-image: url('/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+  top: -20px;
+  width: 1040px;
+  height: 820px;
+  background-color: #3e5573;
+  border-radius: 650px 0 0 650px / 100% 0 0 100%;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 130px;
+  margin-right: 60px;
+
+  gap: 46px;
+}
+
+.title {
+  margin: 0;
+  color: white;
+  font-size: 50px;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-family: var(--font-lora);
+}
+.text {
+  margin: 0;
+  color: white;
+  font-size: 17px;
+  font-weight: 300;
+  text-transform: uppercase;
+
+  font-family: var(--font-open-sans);
+}
+
+.button {
+  width: 245px;
+  height: 58px;
+
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+
+  font-family: var(--font-open-sans);
+
+  border: 1px solid white;
+  border-radius: 35px;
+
+  cursor: pointer;
+}
