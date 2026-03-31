@@ -1,0 +1,120 @@
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  background-image: url('/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+
+  transition: opacity 0.8s ease;
+  z-index: 1;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 800px;
+    background: linear-gradient(to bottom, transparent, white);
+  }
+}
+
+.frame {
+  position: relative;
+  z-index: 2;
+  width: 980px;
+  height: 560px;
+  border-radius: 300px;
+  border: 5px solid #0d3752;
+  background-color: #fffdf6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    width: 940px;
+    height: 530px;
+    border-radius: 300px;
+    border: 3px solid #0d3752;
+    background-color: #fffdf6;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.imageWelcome {
+  position: relative;
+  width: 350px;
+  height: 130px;
+}
+
+.imageBow {
+  position: relative;
+  width: 110px;
+  height: 100px;
+  margin-top: -50px;
+}
+
+.image {
+  object-fit: contain;
+}
+
+.title {
+  position: relative;
+  margin: 0;
+  color: #0d3752;
+  font-size: 100px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: var(--font-playfair);
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 200px;
+    height: 113px;
+    background-image: url('/day.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.description {
+  font-family: var(--font-open-sans);
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: 300;
+  color: #0d3752;
+  max-width: 580px;
+
+  line-height: 26px;
+  text-align: center;
+  margin: 0;
+
+  margin-top: 65px;
+}
+
+.time {
+  margin: 0;
+  font-size: 32px;
+  font-family: var(--font-playfair);
+  color: #3e5573;
+}
+
+.circle {
+  background-color: #0d3752;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+
+  margin-top: 20px;
+}

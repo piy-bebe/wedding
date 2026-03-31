@@ -3,17 +3,12 @@ import { useState } from 'react';
 import styles from '@/styles/promo.module.scss';
 import Image from 'next/image';
 
-export default function Promo() {
-  const [hiding, setHiding] = useState(false);
-  const [hidden, setHidden] = useState(false);
+interface PromoProps {
+  handleClose: () => void;
+  hiding: boolean;
+}
 
-  const handleClose = () => {
-    setHiding(true);
-    setTimeout(() => setHidden(true), 800);
-  };
-
-  if (hidden) return null;
-
+export default function Promo({ handleClose, hiding }: PromoProps) {
   return (
     <div className={`${styles.promo} ${hiding ? styles.hiding : ''}`}>
       <div className={styles.wrapper}>
