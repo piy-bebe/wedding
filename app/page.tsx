@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 import Promo from '@/components/promo';
 import Hero from '@/components/hero';
+import Address from '@/components/address';
 
 export default function Home() {
   const [hiding, setHiding] = useState(false);
@@ -16,7 +17,11 @@ export default function Home() {
   return (
     <>
       {!hidden && <Promo handleClose={handleClose} hiding={hiding} />}
-      {hidden && <Hero />}
+      {hidden && (
+        <>
+          <Hero /> <Address />
+        </>
+      )}
     </>
   );
 }

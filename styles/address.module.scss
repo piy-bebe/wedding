@@ -1,0 +1,48 @@
+.address {
+  max-width: 1920px;
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+  height: 800px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 680px;
+    height: 365px;
+
+    background-image: url('/border.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 680px;
+    height: 365px;
+
+    background-image: url('/border.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    transform: rotate(180deg);
+  }
+}
