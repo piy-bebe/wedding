@@ -15,7 +15,7 @@ export default function Promo() {
           </div>
           <h1 className={styles.title}>wedding</h1>
           <p className={styles.description}>
-            Судьбой нам было предначертано встретить друг друга и обрести своё счастье, которым спешим с вами
+            Судьбой нам было предначертано встретить друг друга и обрести своё счастье, которым спешим с вами
             поделиться!
           </p>
           <p className={styles.time}>20.11.2025</p>
