@@ -1,7 +1,8 @@
 import styles from '@/styles/schedule.module.scss';
+
 export default function Schedule() {
   return (
-    <div className={styles.schedule}>
+    <div className={styles.container}>
       <h2 className={styles.title}>Программа дня</h2>
       <div className={styles.block}>
         <h3 className={styles.subtitle}>— 16:00 Сбор гостей</h3>
