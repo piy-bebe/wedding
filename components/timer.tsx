@@ -1,5 +1,5 @@
 'use client';
-
+import styles from '@/styles/timer.module.scss';
 import { useState, useEffect } from 'react';
 
 const WEDDING_DATE = new Date('2026-08-07T14:00:00');
@@ -31,10 +31,25 @@ export default function Timer() {
   if (!timeLeft) return <div>Это уже сегодня! 🎉</div>;
 
   return (
-    <div>
-      <h2>До свадьбы осталось:</h2>
-      <div>
-        {timeLeft.days} дней, {timeLeft.hours} часов, {timeLeft.minutes} минут, {timeLeft.seconds} секунд
+    <div className={styles.container}>
+      <h2 className={styles.title}>До свадьбы осталось:</h2>
+      <div className={styles.block}>
+        <div className={styles.column}>
+          <p className={styles.time}>{timeLeft.days}</p>
+          <p className={styles.text}>день</p>
+        </div>
+        <div className={styles.column}>
+          <p className={styles.time}> {timeLeft.hours}</p>
+          <p className={styles.text}>час</p>
+        </div>
+        <div className={styles.column}>
+          <p className={styles.time}> {timeLeft.minutes}</p>
+          <p className={styles.text}>минут</p>
+        </div>
+        <div className={styles.column}>
+          <p className={styles.time}> {timeLeft.seconds}</p>
+          <p className={styles.text}>секунд</p>
+        </div>
       </div>
     </div>
   );

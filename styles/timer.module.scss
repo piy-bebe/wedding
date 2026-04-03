@@ -1,0 +1,55 @@
+@use './variables' as *;
+.container {
+  max-width: 440px;
+
+  margin: 85px auto;
+}
+.title {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: 35px;
+  font-family: var(--font-playfair);
+  font-weight: 100;
+  text-transform: uppercase;
+  color: $primary-color;
+}
+
+.block {
+  display: flex;
+  justify-content: space-around;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.column:not(:last-child) {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    width: 1px;
+    height: 70px;
+    background-color: $primary-color;
+  }
+}
+.text {
+  margin: 0;
+  color: $primary-color;
+  font-family: var(--font-open-sans);
+  font-size: 16px;
+  font-weight: 100;
+}
+.time {
+  margin: 0;
+  margin-bottom: 15px;
+  color: $primary-color;
+  font-family: var(--font-playfair);
+  font-size: 51px;
+  font-weight: 100;
+}
