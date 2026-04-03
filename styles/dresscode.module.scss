@@ -1,0 +1,40 @@
+@use './variables' as *;
+
+.dresscode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  margin-top: 75px;
+  margin-bottom: 40px;
+
+  font-size: 60px;
+  font-family: var(--font-playfair);
+  font-weight: 100;
+  text-transform: uppercase;
+  color: $primary-color;
+}
+
+.text {
+  color: $primary-color;
+  font-family: var(--font-open-sans);
+  font-size: 17px;
+  font-weight: 300;
+  text-align: center;
+  max-width: 560px;
+}
+
+.colors {
+  display: flex;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.color {
+  width: 82px;
+  height: 82px;
+  background-color: rgb(175, 175, 175);
+}
