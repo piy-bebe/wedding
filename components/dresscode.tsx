@@ -16,6 +16,18 @@ export default function DressCode() {
           <div className={styles.color}></div>
         </div>
       </div>
+      <div className={styles.container}>
+        <h3 className={styles.subtitle}>— девушки</h3>
+        <p className={styles.description}>
+          Вечерние платья, костюмы, юбки, блузки. Приветствуются аксессуары в палитре торжества.
+        </p>
+      </div>
+      <div className={styles.container}>
+        <h3 className={styles.subtitle}>— мужчины</h3>
+        <p className={styles.description}>
+          Рубашка / футболка, брюки и пиджак. Лоферы, мокасины или белые кроссовки.
+        </p>
+      </div>
     </div>
   );
 }
