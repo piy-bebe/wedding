@@ -7,6 +7,7 @@ import Address from '@/components/address';
 import Info from '@/components/info';
 import DressCode from '@/components/dresscode';
 import Timer from '@/components/timer';
+import Footer from '@/components/footer';
 
 export default function Home() {
   const [hiding, setHiding] = useState(false);
@@ -22,7 +23,7 @@ export default function Home() {
       {!hidden && <Promo handleClose={handleClose} hiding={hiding} />}
       {hidden && (
         <>
-          <Hero /> <Address /> <Info /> <DressCode /> <Timer />
+          <Hero /> <Address /> <Info /> <DressCode /> <Timer /> <Footer />
         </>
       )}
     </>
