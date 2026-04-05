@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import styles from '@/styles/timer.module.scss';
 import { useState, useEffect } from 'react';
 
-const WEDDING_DATE = new Date('2026-08-07T14:00:00');
+const WEDDING_DATE = new Date('2026-08-08T16:00:00');
 const easing = [0.25, 0.46, 0.45, 0.94] as const;
 
 function getTimeLeft() {
