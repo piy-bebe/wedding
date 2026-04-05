@@ -18,7 +18,7 @@ export default function Promo() {
             Судьбой нам было предначертано встретить друг друга и обрести своё счастье, которым спешим с вами
             поделиться!
           </p>
-          <p className={styles.time}>20.11.2025</p>
+          <p className={styles.time}>08.08.2026</p>
           <div className={styles.circle}></div>
         </div>
       </div>

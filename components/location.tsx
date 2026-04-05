@@ -41,10 +41,10 @@ export default function Location() {
             Наш праздник пройдет на площадке:
           </motion.p>
           <motion.h3 className={styles.subtitle} variants={childVariants}>
-            The sun - veranda
+            Посейдон
           </motion.h3>
           <motion.p className={styles.text} variants={childVariants}>
-            г. Солнечногорск, Тимоновское ш., 36
+            Ул. Загорьевская 13
           </motion.p>
           <motion.div variants={childVariants}>
             <Image

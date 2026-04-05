@@ -66,7 +66,7 @@ export default function Schedule() {
           },
           { time: '— 16:30 Церемония', desc: 'Проживите этот важный момент вместе с нами' },
           { time: '— 17:00 Банкет', desc: 'Время трогательных поздравлений, душевных разговоров и вкусной еды' },
-          { time: '— 22:00 Завершение', desc: 'К сожалению, даже такой прекрасный вечер может закончиться' },
+          { time: '— 02:00 Завершение', desc: 'К сожалению, даже такой прекрасный вечер может закончиться' },
         ].map((item, i) => (
           <motion.div key={i} className={styles.block} variants={blockVariants}>
             <motion.h3 className={styles.subtitle} variants={childVariants}>

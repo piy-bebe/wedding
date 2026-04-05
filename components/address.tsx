@@ -40,7 +40,7 @@ export default function Address() {
           нетерпением ждём возможности увидеть вас и вместе отпраздновать начало нашего совместного пути.
         </motion.p>
         <motion.p className={styles.love} variants={childVariants}>
-          С любовью, Виктор и Света
+          С любовью, Виктор и Светлана
         </motion.p>
       </motion.div>
     </div>

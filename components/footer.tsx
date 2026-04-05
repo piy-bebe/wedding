@@ -33,15 +33,6 @@ export default function Footer() {
       viewport={{ once: true, margin: '-75px' }}
     >
       <motion.h2 className={styles.title} variants={childVariants}>
-        Контакты
-      </motion.h2>
-      <motion.p className={styles.text} variants={childVariants}>
-        В случае возникновения вопросов в день торжества, обращайтесь к нашему свадебному организатору{' '}
-      </motion.p>
-      <motion.p className={styles.phone} variants={childVariants}>
-        +7 (123) 431-44-12
-      </motion.p>
-      <motion.h2 className={styles.title} variants={childVariants}>
         До встречи!
       </motion.h2>
       <motion.div variants={childVariants}>
