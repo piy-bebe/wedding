@@ -46,22 +46,26 @@ export default function Location() {
           <motion.p className={styles.text} variants={childVariants}>
             Ул. Загорьевская 13
           </motion.p>
-          {/* <motion.div variants={childVariants}>
-            <Image
+          <motion.div variants={childVariants}>
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?pt=37.687620,55.580468&z=16&l=map"
+              width="474"
+              height="318"
               className={styles.image}
-              src="/location.jpg"
-              alt="Место проведения свадьбы"
-              width={474}
-              height={318}
-              priority
+              allowFullScreen
             />
-          </motion.div> */}
+          </motion.div>
           <motion.p className={styles.text} variants={childVariants}>
             Ниже вы найдете карту, она поможет вам быстрее найти место торжества и добраться вовремя
           </motion.p>
-          <motion.button className={styles.button} variants={childVariants}>
+          <motion.a
+            href="https://yandex.ru/map-widget/v1/?pt=37.687620,55.580468&z=16&l=map"
+            target="_blank"
+            className={styles.button}
+            variants={childVariants}
+          >
             Открыть карту
-          </motion.button>
+          </motion.a>
         </motion.div>
       </div>
     </div>

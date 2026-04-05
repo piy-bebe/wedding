@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import styles from '@/styles/timer.module.scss';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 const WEDDING_DATE = new Date('2026-08-08T16:00:00');
 const easing = [0.25, 0.46, 0.45, 0.94] as const;
@@ -43,6 +44,15 @@ const columnVariants = {
   },
 };
 
+const imageVariants = {
+  hidden: { opacity: 0, scale: 1.05 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.9, ease: easing },
+  },
+};
+
 export default function Timer() {
   const [timeLeft, setTimeLeft] = useState(getTimeLeft());
 
@@ -62,6 +72,15 @@ export default function Timer() {
 
   return (
     <div className={styles.container}>
+      <motion.div
+        className={styles.imageWrap}
+        variants={imageVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <Image alt="img" src="/love.jpg" fill style={{ objectFit: 'cover', objectPosition: 'bottom' }} priority />
+      </motion.div>
       <motion.h2
         className={styles.title}
         variants={titleVariants}
