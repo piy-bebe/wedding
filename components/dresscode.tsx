@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import styles from '@/styles/dresscode.module.scss';
+import Image from 'next/image';
 
 const easing = [0.25, 0.46, 0.45, 0.94] as const;
 
@@ -50,33 +51,71 @@ export default function DressCode() {
           ))}
         </motion.div>
       </motion.div>
-
-      {[
-        {
-          subtitle: '— девушки',
-          desc: 'Вечерние платья, костюмы, юбки, блузки. Приветствуются аксессуары в палитре торжества.',
-        },
-        {
-          subtitle: '— мужчины',
-          desc: 'Рубашка / футболка, брюки и пиджак. Лоферы, мокасины или белые кроссовки.',
-        },
-      ].map((item, i) => (
-        <motion.div
-          key={i}
-          className={styles.container}
-          variants={blockVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-75px' }}
-        >
-          <motion.h3 className={styles.subtitle} variants={childVariants}>
-            {item.subtitle}
-          </motion.h3>
-          <motion.p className={styles.description} variants={childVariants}>
-            {item.desc}
-          </motion.p>
-        </motion.div>
-      ))}
+      <div className={styles.containerImg}>
+        <Image
+          alt="img"
+          src="/dresscode/1.JPG"
+          width={200}
+          height={200}
+          style={{ objectFit: 'cover' }}
+          quality={75}
+          priority
+        />
+        <Image
+          alt="img"
+          src="/dresscode/2.JPG"
+          width={200}
+          height={200}
+          style={{ objectFit: 'cover' }}
+          quality={75}
+          priority
+        />
+        <Image
+          alt="img"
+          src="/dresscode/3.JPG"
+          width={200}
+          height={200}
+          style={{ objectFit: 'cover' }}
+          quality={75}
+          priority
+        />
+        <Image
+          alt="img"
+          src="/dresscode/4.JPG"
+          width={200}
+          height={200}
+          style={{ objectFit: 'cover' }}
+          quality={75}
+          priority
+        />
+        <Image
+          alt="img"
+          src="/dresscode/5.JPG"
+          width={200}
+          height={200}
+          style={{ objectFit: 'cover' }}
+          quality={75}
+          priority
+        />
+        <Image
+          alt="img"
+          src="/dresscode/6.JPG"
+          width={200}
+          height={200}
+          style={{ objectFit: 'cover' }}
+          quality={75}
+          priority
+        />
+        <Image
+          alt="img"
+          src="/dresscode/7.JPG"
+          width={200}
+          height={200}
+          style={{ objectFit: 'cover' }}
+          quality={75}
+          priority
+        />
+      </div>
     </div>
   );
 }
