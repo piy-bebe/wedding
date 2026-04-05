@@ -46,7 +46,7 @@ export default function Location() {
           <motion.p className={styles.text} variants={childVariants}>
             Ул. Загорьевская 13
           </motion.p>
-          <motion.div variants={childVariants}>
+          {/* <motion.div variants={childVariants}>
             <Image
               className={styles.image}
               src="/location.jpg"
@@ -55,7 +55,7 @@ export default function Location() {
               height={318}
               priority
             />
-          </motion.div>
+          </motion.div> */}
           <motion.p className={styles.text} variants={childVariants}>
             Ниже вы найдете карту, она поможет вам быстрее найти место торжества и добраться вовремя
           </motion.p>
