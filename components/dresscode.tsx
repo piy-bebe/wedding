@@ -45,8 +45,8 @@ export default function DressCode() {
           представленной ниже гамме:
         </motion.p>
         <motion.div className={styles.colors} variants={containerVariants}>
-          {[...Array(5)].map((_, i) => (
-            <motion.div key={i} className={styles.color} variants={childVariants} />
+          {[...Array(6)].map((_, i) => (
+            <motion.div key={i} className={`${styles.color} ${styles.color}${i}`} variants={childVariants} />
           ))}
         </motion.div>
       </motion.div>
