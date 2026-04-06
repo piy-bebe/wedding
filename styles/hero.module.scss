@@ -7,8 +7,9 @@
   background-image: url('/background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
-
+  min-height: 100vh;
+  margin-bottom: 100px;
+  padding-top: 40px;
   transition: opacity 0.8s ease;
   z-index: 1;
 
