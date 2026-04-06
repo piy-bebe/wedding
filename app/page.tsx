@@ -34,7 +34,8 @@ export default function Home() {
       {!hidden && <Promo handleClose={handleClose} hiding={hiding} />}
       {hidden && (
         <>
-          <Hero /> <Address /> <Info /> <DressCode /> <Timer /> <Footer />
+          <Hero /> <Address />
+          {/* <Info /> <DressCode /> <Timer /> <Footer /> */}
         </>
       )}
     </>
