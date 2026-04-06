@@ -49,7 +49,7 @@ export default function DressCode() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
-        {images.map((n) => (
+        {/* {images.map((n) => (
           <motion.div key={n} variants={childVariants}>
             <Image
               alt="img"
@@ -61,7 +61,7 @@ export default function DressCode() {
               priority
             />
           </motion.div>
-        ))}
+        ))} */}
       </motion.div>
     </div>
   );
