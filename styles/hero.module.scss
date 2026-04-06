@@ -125,7 +125,10 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 920px) {
+  .hero {
+    margin-bottom: 145px;
+  }
   .frame {
     width: 540px;
     height: auto;
