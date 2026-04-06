@@ -126,14 +126,9 @@
 }
 
 @media (max-width: 920px) {
-  .hero {
-    margin-bottom: 145px;
-  }
   .frame {
     width: 540px;
     height: auto;
-
-    margin-top: 70px;
   }
 
   .imageWelcome {
@@ -173,7 +168,7 @@
 @media (max-width: 654px) {
   .frame {
     max-width: 430px;
-    margin-top: 120px;
+
     border: 4px solid #0d3752;
     &__inner {
       border: 2px solid #0d3752;
@@ -214,7 +209,6 @@
 @media (max-width: 500px) {
   .frame {
     max-width: 320px;
-    margin-top: 80px;
     border: 3px solid #0d3752;
     &__inner {
       border: 2px solid #0d3752;
@@ -223,7 +217,6 @@
 
   .imageWelcome {
     width: 230px;
-
     margin-top: 0;
   }
 
