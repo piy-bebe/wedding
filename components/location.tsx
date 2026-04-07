@@ -49,8 +49,6 @@ export default function Location() {
           <motion.div variants={childVariants}>
             <iframe
               src="https://yandex.ru/map-widget/v1/?pt=37.687620,55.580468&z=16&l=map"
-              width="474"
-              height="318"
               className={styles.image}
               allowFullScreen
             />
