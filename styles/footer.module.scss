@@ -5,6 +5,10 @@
   padding: 120px 0 60px 0;
   background-color: #3e5573;
   border-radius: 150px 150px 0 0;
+
+  @media (max-width: 768px) {
+    border-radius: 80px 80px 0 0;
+  }
 }
 
 .title {
@@ -15,6 +19,13 @@
   font-family: var(--font-playfair);
   font-weight: 100;
   text-transform: uppercase;
+
+  @media (max-width: 900px) {
+    font-size: 45px;
+  }
+  @media (max-width: 400px) {
+    font-size: 40px;
+  }
 }
 
 .text,
