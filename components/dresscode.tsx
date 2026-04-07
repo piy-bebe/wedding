@@ -65,7 +65,7 @@ export default function DressCode() {
             <div key={n} className={styles.imageWrapper}>
               <Image
                 alt="img"
-                src={`/dresscode/${n}.JPG`}
+                src={`/dresscode/image${n}.JPG`}
                 width={200}
                 height={200}
                 style={{ objectFit: 'cover' }}
