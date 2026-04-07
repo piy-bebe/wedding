@@ -1,7 +1,8 @@
 'use client';
 import { motion } from 'framer-motion';
-import styles from '@/styles/dresscode.module.scss';
 import Image from 'next/image';
+import { useRef } from 'react';
+import styles from '@/styles/dresscode.module.scss';
 
 const easing = [0.25, 0.46, 0.45, 0.94] as const;
 
@@ -24,6 +25,8 @@ const childVariants = {
 const images = [1, 2, 3, 4, 5, 6, 7];
 
 export default function DressCode() {
+  const constraintsRef = useRef<HTMLDivElement>(null);
+
   return (
     <div>
       <motion.div
@@ -43,25 +46,36 @@ export default function DressCode() {
       </motion.div>
 
       <motion.div
-        className={styles.containerImg}
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6, ease: easing }}
+        className={styles.sliderWrapper}
+        ref={constraintsRef}
       >
-        {/* {images.map((n) => (
-          <motion.div key={n} variants={childVariants}>
-            <Image
-              alt="img"
-              src={`/dresscode/${n}.JPG`}
-              width={200}
-              height={200}
-              style={{ objectFit: 'cover' }}
-              quality={75}
-              priority
-            />
-          </motion.div>
-        ))} */}
+        <motion.div
+          className={styles.containerImg}
+          drag="x"
+          dragConstraints={constraintsRef}
+          dragElastic={0.1}
+          dragTransition={{ bounceDamping: 30, bounceStiffness: 300 }}
+          whileTap={{ cursor: 'grabbing' }}
+        >
+          {images.map((n) => (
+            <div key={n} className={styles.imageWrapper}>
+              <Image
+                alt="img"
+                src={`/dresscode/${n}.JPG`}
+                width={200}
+                height={200}
+                style={{ objectFit: 'cover' }}
+                quality={75}
+                priority
+                draggable={false}
+              />
+            </div>
+          ))}
+        </motion.div>
       </motion.div>
     </div>
   );
