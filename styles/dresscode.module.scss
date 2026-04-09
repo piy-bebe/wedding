@@ -92,7 +92,7 @@
 
   &::before {
     left: 0;
-    background: linear-gradient(to right, white, transparent);
+    background: linear-gradient(to right, white, transparent 40%);
   }
 
   &::after {
@@ -107,6 +107,10 @@
   padding: 20px 60px;
   cursor: grab;
   width: max-content; // ключевое — чтобы framer знал реальную ширину
+
+  @media (max-width: 425px) {
+    padding: 20px 20px;
+  }
 }
 
 .imageWrapper {
