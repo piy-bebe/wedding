@@ -22,6 +22,24 @@ const childVariants = {
   },
 };
 
+const listVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.25,
+    },
+  },
+};
+
+const blockVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
 const images = [1, 2, 3, 4, 5, 6, 7];
 
 export default function DressCode() {
@@ -76,6 +94,30 @@ export default function DressCode() {
             </div>
           ))}
         </motion.div>
+      </motion.div>
+
+      <motion.div
+        className={styles.dresscode}
+        variants={listVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: '-75px' }}
+      >
+        {[
+          {
+            subtitle: '— Мужчины',
+            desc: 'Нижняя часть должна быть черного цвета. Верхняя часть белого цвета',
+          },
+        ].map((item, i) => (
+          <motion.div key={i} className={styles.block} variants={blockVariants}>
+            <motion.h3 className={styles.subtitle} variants={childVariants}>
+              {item.subtitle}
+            </motion.h3>
+            <motion.p className={styles.description} variants={childVariants}>
+              {item.desc}
+            </motion.p>
+          </motion.div>
+        ))}
       </motion.div>
     </div>
   );
